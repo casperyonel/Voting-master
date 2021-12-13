@@ -143,6 +143,10 @@ contract VotingGreeting is VotingGreetingInterface {
             activeVoteIndex: activeVoteIndex
         });
         activeVotes.push(_participant);
+        // Pushing on end of the array, when vote is actioned then we 0 that value and delete it
+        // Problem is array keeps getting longer though, so a lot of looping / gas if many votes
+        //         Could institute an offset for votes that are inactive, and n = active votes with offset param. 
+        //         Could also compact the array and copy into another, but this won't be gas efficient at all
         // The vote proposer is also record as being for the proposal.
         vote(_participant, _action, true);
     }
