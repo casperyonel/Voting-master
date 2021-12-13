@@ -27,4 +27,5 @@ interface VotingAlgInterface {
      *  the result of the vote is for what was being voted on.
      */
     function assess(uint32 numParticipants, uint32 numVotedFor, uint32 numVotedAgainst) external pure returns (bool);
+    // Write applications against interfaces and not implementation contracts
 }
