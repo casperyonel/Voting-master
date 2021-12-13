@@ -1,0 +1,12 @@
+{
+  "name": "voting-master",
+  "version": "1.0.0",
+  "description": "This repo contains example code which members of the Ethereum Engineering Group Meet-up have contributed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
