@@ -76,8 +76,11 @@ module.exports = {
 
     getInstance: async function() {
         let impl = await VotingGreetingImpl.deployed();
+        // Name is off here
         // Note linking to the dataholder for this is done in the 1_initial_migration.js
         return await VotingGreeting.at(impl.address);
+        // Really saying, "just view this implementation using the interface" - for test purposes
+        
 
     },
     getInstanceV2: async function() {
